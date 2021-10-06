@@ -10,7 +10,7 @@ public class PDFSplitter {
 
     public static void main(String args[]) throws IOException{
 
-        File file = new File("D:\\xtra\\PDFSplitter\\src\\main\\resources\\BPITrade_ApplicationForm.pdf");
+        File file = new File("{Insert source path here}");
         PDDocument pdDocument = PDDocument.load(file);
 
         Splitter splitter = new Splitter();
@@ -20,7 +20,7 @@ public class PDFSplitter {
         int i =1;
         while(iterator.hasNext()){
             PDDocument pd = iterator.next();
-            pd.save("C:/Users/Lao/OneDrive/Desktop/PDF Result/splitPDf" + i++ +".pdf");
+            pd.save("{Insert output path here}/name" + i++ +".pdf");
         }
         System.out.print("PDF Created");
         pdDocument.close();
